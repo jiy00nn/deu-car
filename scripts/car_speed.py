@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import rospy
 from geometry_msgs.msg import Twist
@@ -27,6 +26,6 @@ class CarSpeed:
 if __name__ == "__main__":
 	rospy.init_node('car_speed')
 	carspeed = CarSpeed()
-	carspeed = set.speed(1)
-	carspeed.drive
+	carspeed.set_speed(1)
+	carspeed.drive()
 	rospy.spin()
