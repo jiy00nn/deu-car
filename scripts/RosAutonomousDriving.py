@@ -1,8 +1,13 @@
 #!/usr/bin/env python
-from driving.DetectedBar import DetectedBar
+from driving.turtle_move import TurtleMove
+from driving.PickLine import PickLine
+
+t = TurtleMove()
+p = PickLine()
 
 def run():
-    DetectedBar()
+    t.move()
 
 if __name__=="__main__":
-    run()
+    while not rospy.is_shutdown():
+        run()
